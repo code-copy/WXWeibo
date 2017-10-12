@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gzE-dY-DMQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zVt-o4-yAz">
+            <objects>
+                <navigationController id="gzE-dY-DMQ" customClass="WXNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cnd-53-ryY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eb5-OX-DHB" kind="relationship" relationship="rootViewController" id="izw-mG-aMq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdC-5k-xIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230.11555555555555" y="220.45973333333333"/>
+        </scene>
+        <!--更多-->
+        <scene sceneID="ki3-Fs-iTM">
+            <objects>
+                <viewController id="eb5-OX-DHB" customClass="MoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Ab-Fy-uyS"/>
+                        <viewControllerLayoutGuide type="bottom" id="ipD-fy-f5t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e2v-KI-Ktb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-u4-V0A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eb5-OX-DHB" id="fF1-gy-MTc"/>
+                                    <outlet property="delegate" destination="eb5-OX-DHB" id="Ho4-aZ-Oat"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Egh-u4-V0A" firstAttribute="leading" secondItem="e2v-KI-Ktb" secondAttribute="leading" id="9D0-M3-7vo"/>
+                            <constraint firstAttribute="trailing" secondItem="Egh-u4-V0A" secondAttribute="trailing" id="YUI-UF-8Q1"/>
+                            <constraint firstItem="Egh-u4-V0A" firstAttribute="top" secondItem="e2v-KI-Ktb" secondAttribute="top" id="dbZ-Z6-WeG"/>
+                            <constraint firstItem="ipD-fy-f5t" firstAttribute="top" secondItem="Egh-u4-V0A" secondAttribute="bottom" id="eGd-Eb-Kaf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="更多" id="ckj-mS-Rbm"/>
+                    <connections>
+                        <outlet property="_tableView" destination="Egh-u4-V0A" id="4Zv-GU-A1t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtb-1l-zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="227"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

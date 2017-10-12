@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  WXWeibo
+//
+//  Created by wei.chen on 15/4/2.
+//  Copyright (c) 2015年 www.iphonetrain.com 无限互联3G学院. All rights reserved.
+//
+
+#ifndef WXWeibo_PrefixHeader_pch
+#define WXWeibo_PrefixHeader_pch
+
+#import "Common.h"
+#import <UIKit/UIKit.h>
+#import "UIViewExt.h"
+
+#endif
